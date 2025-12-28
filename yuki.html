@@ -22,12 +22,12 @@
       margin-top: 20px;
     }
 
-    /* ★ ARボタンを大きくする */
+    /* ★ ARボタンを大きくする（押しやすいサイズ） */
     model-viewer::part(ar-button) {
-      width: 120px;
-      height: 120px;
-      font-size: 20px;
-      border-radius: 60px;
+      width: 180px;
+      height: 180px;
+      font-size: 24px;
+      border-radius: 90px;
       background-color: #007aff;
       color: white;
     }
@@ -51,8 +51,8 @@
     const mv = document.getElementById('cardModel');
 
     mv.addEventListener('load', () => {
-      // ★ 名刺サイズにさらに縮小（2m → 約5cm）
-      mv.scale = '0.0125 0.0125 0.0125';
+      // ★ モデルをさらに縮小（2m → 約6mm → 名刺サイズに近い）
+      mv.scale = '0.003 0.003 0.003';
     });
   </script>
 
