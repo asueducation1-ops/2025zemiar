@@ -4,13 +4,23 @@
   <meta charset="UTF-8">
   <title>Yuki の AR名刺</title>
 
+  <!-- model-viewer 読み込み -->
   <script type="module"
     src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
   </script>
 
   <style>
-    body { margin: 0; padding: 20px; text-align: center; font-family: sans-serif; }
-    model-viewer { width: 300px; height: 300px; margin-top: 20px; }
+    body {
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      font-family: sans-serif;
+    }
+    model-viewer {
+      width: 300px;
+      height: 300px;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -29,7 +39,11 @@
 
   <script>
     const mv = document.getElementById('cardModel');
-    mv.addEventListener('load', () => { mv.scale = '1 1 1'; });
+
+    mv.addEventListener('load', () => {
+      // ★ 名刺サイズに縮小（2m → 約10cm）
+      mv.scale = '0.05 0.05 0.05';
+    });
   </script>
 
 </body>
