@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Yuki の AR名刺</title>
+
+  <script type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
+
+  <style>
+    body { margin: 0; padding: 20px; text-align: center; font-family: sans-serif; }
+    model-viewer { width: 300px; height: 300px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+  <h1>Yuki の AR名刺</h1>
+
+  <model-viewer id="cardModel"
+    ios-src="https://raw.githubusercontent.com/asueducation1-ops/2025zemiar/main/yuki.usdz"
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    camera-controls
+    autoplay
+    environment-image="neutral"
+    ar-scale="fixed">
+  </model-viewer>
+
+  <script>
+    const mv = document.getElementById('cardModel');
+    mv.addEventListener('load', () => { mv.scale = '1 1 1'; });
+  </script>
+
+</body>
+</html>
